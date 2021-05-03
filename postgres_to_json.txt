@@ -1,0 +1,5 @@
+psql -U {username}
+\o '{absolute filepath}'
+SET client_encoding TO 'UTF8';
+SELECT array_to_json(array_agg(trainableformat), FALSE) AS ok_json FROM trainableformat;
+\o
